@@ -306,9 +306,6 @@ function mostrarMensajeCompra(mensajes = []) {
 
 /* Recuperamos las compras realizadas anteriormente, las cuales tenemos guardadas en una ruta relativa. */
 
-let tablaBody = document.getElementById("comprasTabla");
-tablaBody.innerHTML = "";
-
 fetch("./../data/posts.json")
     .then((resp) => resp.json())
     .then((compras) => {
