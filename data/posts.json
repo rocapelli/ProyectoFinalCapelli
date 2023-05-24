@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "cine": "Belgrano",
+        "pelicula": "El Padrino",
+        "formato": "2D",
+        "idioma": "Subtitulada",
+        "dia": "LUN 26 de junio",
+        "hora": "22 hs.",
+        "entrada": "2",
+        "importe": 1500
+    },
+    {
+        "id": 2,
+        "cine": "Palermo",
+        "pelicula": "El Rey León",
+        "formato": "3D",
+        "idioma": "Doblada",
+        "dia": "SAB 24 de junio",
+        "hora": "18 hs.",
+        "entrada": "3",
+        "importe": 4500
+    },
+    {
+        "id": 3,
+        "cine": "Recoleta",
+        "pelicula": "Volver al futuro",
+        "formato": "2D",
+        "idioma": "Subtitulada",
+        "dia": "MIE 28 de junio",
+        "hora": "22 hs.",
+        "entrada": "1",
+        "importe": 750
+    },
+    {
+        "id": 4,
+        "cine": "Palermo",
+        "pelicula": "Forrest Gump",
+        "formato": "2D",
+        "idioma": "Subtitulada",
+        "dia": "DOM 25 de junio",
+        "hora": "20 hs.",
+        "entrada": "4",
+        "importe": 6000
+    }
+]
