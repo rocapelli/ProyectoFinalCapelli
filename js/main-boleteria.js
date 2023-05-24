@@ -241,7 +241,7 @@ function crearCompra() {
     Swal.fire({
         position: 'center',
         icon: 'success',
-        title: '¡Tu compra fue hecha con éxito!',
+        title: '¡Tu compra fue realizada con éxito!',
         text: 'Cine: ' + unCine.nombre + '\n / Película: ' + unaPelicula.nombre + '\n / Formato: ' + unFormato.nombre + '\n / Idioma: ' + unIdioma.nombre + '\n / Día: ' + unDia.nombre + '\n / Hora: ' + unaHora.nombre + '\n / Cantidad de entradas: ' + unaEntrada.nombre + '\n / Total a pagar: $' + importe,
         showConfirmButton: true,
         confirmButtonText: 'Salir',
@@ -306,26 +306,14 @@ function mostrarMensajeCompra(mensajes = []) {
 
 /* Recuperamos las compras realizadas anteriormente, las cuales tenemos guardadas en una ruta relativa. */
 
-let tablaBody = document.getElementById("comprasRecuperadas");
+let tablaBody = document.getElementById("comprasTabla");
 tablaBody.innerHTML = "";
 
 fetch("./../data/posts.json")
     .then((resp) => resp.json())
     .then((compras) => {
         compras.forEach((unaCompra) => {
-            let registro = document.createElement("tr");
-            registro.innerHTML = `<tr>
-            <td scope="row">${unaCompra.id}</td>
-            <td scope="row">${unaCompra.cine}</td>
-            <td scope="row">${unaCompra.pelicula}</td>
-            <td scope="row">${unaCompra.formato}</td>
-            <td scope="row">${unaCompra.idioma}</td>
-            <td scope="row">${unaCompra.dia}</td>
-            <td scope="row">${unaCompra.hora}</td>
-            <td scope="row">${unaCompra.entrada}</td>
-            <td scope="row">${unaCompra.importe}</td>
-            </tr>`;
-            tablaBody.append(registro);
+            localStorage.setItem("misCompras", JSON.stringify(compras));
         });
     })
     .catch((error) => {
